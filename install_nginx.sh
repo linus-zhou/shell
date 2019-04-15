@@ -29,13 +29,13 @@ echo 'root /usr/share/nginx/html;'  >> /etc/nginx/conf.d/file_server.conf
 echo 'index index.html;' >> /etc/nginx/conf.d/file_server.conf
 echo '}' >> /etc/nginx/conf.d/file_server.conf
 echo 'location /files {' >> /etc/nginx/conf.d/file_server.conf
-echo 'alias /usr/share/nginx/files;' > /etc/nginx/conf.d/file_server.conf
-echo 'limit_conn addr 2;' > /etc/nginx/conf.d/file_server.conf
-echo 'limit_rate_after 20m;' > /etc/nginx/conf.d/file_server.conf
-echo 'limit_rate 100k;' > /etc/nginx/conf.d/file_server.conf
-echo 'charset utf-8;' > /etc/nginx/conf.d/file_server.conf
-echo '}' > /etc/nginx/conf.d/file_server.conf
-echo '}' > /etc/nginx/conf.d/file_server.conf
+echo 'alias /usr/share/nginx/files;' >> /etc/nginx/conf.d/file_server.conf
+echo 'limit_conn addr 2;' >> /etc/nginx/conf.d/file_server.conf
+echo 'limit_rate_after 20m;' >> /etc/nginx/conf.d/file_server.conf
+echo 'limit_rate 100k;' >> /etc/nginx/conf.d/file_server.conf
+echo 'charset utf-8;' >> /etc/nginx/conf.d/file_server.conf
+echo '}' >> /etc/nginx/conf.d/file_server.conf
+echo '}' >> /etc/nginx/conf.d/file_server.conf
 
 systemctl start nginx
 systemctl enable nginx
